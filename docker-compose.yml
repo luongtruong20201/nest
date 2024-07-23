@@ -1,0 +1,16 @@
+version: '3.0'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=luongtruong20201
+      - MYSQL_USER=luongtruong
+      - MYSQL_PASSWORD=123456
+    ports:
+      - '3307:3306'
+    expose:
+      - '3306'
